@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# This script displays a list of currently running processes
-# displays lines containing the bash word
-# shellcheck disable=SC2009
+# This script displays the PID, along with the process name, of processes whose name contain the word bash
+# Not allowed to use ps
 
-ps auxf | grep bash
+pgrep -l bash
