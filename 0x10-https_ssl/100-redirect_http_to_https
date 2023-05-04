@@ -37,15 +37,15 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 
-frontend sammykingx.tech
+frontend 
         bind 0:80
-        bind 0:443 ssl crt /etc/ssl/private/sammykingx.tech.pem
+        bind 0:443 ssl crt /etc/ssl/privat/
         http-request redirect scheme https code 301 unless { ssl_fc }
         option forwardfor
-        default_backend sammykingx.tech_backend
+        default_backend 
 
-backend sammykingx.tech_backend
+backend 
         balance roundrobin
-        server 64820-web-01 54.236.51.243 check
-        server 64820-web-02 54.144.249.112 check
+        server 159670-web-01 54.236.51.243 check
+        server 159670-web-02 54.144.249.112 check
 

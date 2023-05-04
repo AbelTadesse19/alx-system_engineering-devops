@@ -33,18 +33,18 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  ehoneah-frontend-http
+frontend  -frontend-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend ehoneah-backend
+        default_backend -backend
 
-frontend ehoneah-frontend-https
+frontend -frontend-https
 	bind *:443 ssl crt /etc/haproxy/
 	http-request set-header X-Forwarded-Proto https
 	default_backend ehoneah-backend
 
-backend ehoneah-backend
+backend -backend
         balance roundrobin
         server 159670-web-01 54.236.51.243 check
         server 159670-web-02 54.144.249.112 check
