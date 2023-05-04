@@ -46,6 +46,6 @@ frontend sammykingx.tech
 
 backend sammykingx.tech_backend
         balance roundrobin
-        server 64820-web-01 100.26.152.157:80 check
-        server 64820-web-02 52.86.102.6:80 check
+        server 64820-web-01 54.236.51.243 check
+        server 64820-web-02 54.144.249.112 check
 
